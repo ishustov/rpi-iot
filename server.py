@@ -6,8 +6,10 @@ def simple_app(env, start_response):
     
     # set some http headers that are sent to the browser
     status = '200 OK'
-    headers = [('Content-type', 'text/plain')] 
+    headers = [('Content-type', 'text/html')] #Changed from plain to html by . 
     start_response(status, headers)
+
+#Added on headers
 
     # What did the user ask for?
     if env["PATH_INFO"] == "/on":
